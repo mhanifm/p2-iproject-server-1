@@ -13,8 +13,16 @@ const errorHandler = (err, req, res, next) => {
             code = 401
             message = ['Invalid email or password']
             break;
+        case 'JsonWebTokenError':
+            code = 401
+            message = ['Invalid access token']
+        break;
+        case 'SequelizeUniqueConstraintError':
+            code = 400
+            message = ['Email already exist']
+        break;
         default:
-            break;
+        break;
     }
 
     res.status(code).json({ message })
