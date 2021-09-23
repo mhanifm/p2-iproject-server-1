@@ -19,7 +19,7 @@ const errorHandler = (err, req, res, next) => {
         break;
         case 'SequelizeUniqueConstraintError':
             code = 400
-            message = ['Email already exist']
+            message = ['Email is already exist']
         break;
         default:
         break;
