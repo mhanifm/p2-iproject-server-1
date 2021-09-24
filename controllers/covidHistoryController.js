@@ -15,6 +15,9 @@ class CovidHistoryController {
                 date: data.response[0].day
             }})
         })
+        .catch(err => {
+            res.status(500).json({message: 'Internal server error'})
+        })
     }
 }
 

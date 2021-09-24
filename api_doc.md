@@ -10,8 +10,9 @@ list of available endpoints:
 
 - `POST /register`
 - `POST /login`
-- `GET /list/hotels`
 - `GET /covid/histories`
+- `GET /list/hotels`
+- `GET /countries`
 
 ---
 
@@ -132,6 +133,13 @@ not needed
 }
 ```
 
+> _Request ( 500 - Internal Server Error )_
+```
+{
+    "message": "Internal server error"
+}
+```
+
 &nbsp;
 
 **`GET /list/hotels`**
@@ -194,4 +202,56 @@ not needed
         "city": "Bogor"
     }
 ]
+```
+
+> _Request ( 500 - Internal Server Error )_
+```
+{
+    "message": "Internal server error"
+}
+```
+
+&nbsp;
+
+**`GET /countries`**
+
+Use this to get list hotels near your area
+
+&nbsp;
+
+> _Request Header_
+```
+not needed
+```
+
+> _Request Body_
+```
+not needed
+```
+
+>_Response ( 200 - OK )_
+```
+[
+    "Afghanistan",
+    "Albania",
+    "Algeria",
+    "Andorra",
+    "Angola",
+    "Anguilla",
+    "Antigua-and-Barbuda",
+    "Argentina",
+    "Armenia",
+    "Aruba",
+    "Australia",
+    "Austria",
+    "Azerbaijan",
+    ...
+]
+```
+
+> _Request ( 500 - Internal Server Error )_
+```
+{
+    "message": "Internal server error"
+}
 ```
